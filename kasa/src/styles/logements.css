@@ -15,9 +15,10 @@
 
 .section_details {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   padding-top: 0px;
   padding-left: 7.5%;
+  padding-right: 7.5%;
 }
 
 .section_details h1 {
@@ -32,13 +33,21 @@
 }
 
 .section_details .tags {
-  font-size: 14px;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: -5px;
   background-color: #ff6060;
   width: 115px;
   height: 25px;
   border-radius: 10px;
+}
+
+.div_tags {
+  display: flex;
+  font-size: 14px;
+  color: white;
+  gap: 15px;
 }
 
 .dropdown_details {

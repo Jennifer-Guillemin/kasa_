@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import HomeIMG from "../assets/LOGO.png";
 
 function Banner() {
   const location = useLocation();
@@ -11,7 +12,7 @@ function Banner() {
 
   return (
     <div className="banner">
-      <img src="./src/assets/LOGO.png" alt="" />
+      <img src={HomeIMG} alt="" />
       <nav>
         <Link
           className={`no-style ${selected === "/" ? "selected" : ""}`}

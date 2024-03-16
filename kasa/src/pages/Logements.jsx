@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import LogementsData from "../data/logements.json";
+import Collapse from "../components/Collapse";
 
 const LogementDetail = () => {
   const { id } = useParams();
@@ -18,15 +19,29 @@ const LogementDetail = () => {
         <img className="img_detail" src={logement.cover} alt={logement.title} />
       </section>
       <section className="section_details">
-        <h1>{logement.title}</h1>
-        <p>{logement.location}</p>
         <div>
-          <p className="tags">{logement.tags}</p>
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
+          <div className="div_tags">
+            {logement.tags.map((tag, index) => (
+              <p key={index} className="tags">
+                {tag}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2>{logement.host.name}</h2>
+          <p>{logement.rating}</p>
         </div>
       </section>
       <div className="dropdown_details">
-        <div className="collapse_details"></div>
-        <div className="collapse_details"></div>
+        <div className="collapse_details">
+          <Collapse title={"Description"} content={logement.description} />
+        </div>
+        <div className="collapse_details">
+          <Collapse title={"Équipements"} content={logement.equipments} />
+        </div>
       </div>
     </div>
   );

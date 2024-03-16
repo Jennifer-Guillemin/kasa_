@@ -10,6 +10,7 @@ import "./styles/error404.css";
 import { createRoot } from "react-dom/client";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import "./assets/LOGO.png";
 
 const domNode = document.getElementById("root");
 const root = createRoot(domNode);
