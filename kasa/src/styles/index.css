@@ -25,9 +25,15 @@
 .banner {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: center;
-  margin: 50px 0px 0px 0px;
+  padding-top: 50px;
+  padding-left: 7.5%;
+}
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 nav {
@@ -35,12 +41,13 @@ nav {
   gap: 57px;
   font-style: normal;
   font-size: 24px;
+  padding-right: 8%;
 }
 
-body {
-  margin: 0;
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 section {
@@ -53,11 +60,12 @@ section {
   justify-content: center;
   position: relative;
   padding-bottom: 50px;
+  width: 85%;
 }
 
 .image-section h1 {
-  width: 733px;
   position: absolute;
+  width: 55%;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -68,57 +76,108 @@ section {
 .mer {
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 223px;
   border-radius: 20px;
   filter: brightness(0.5);
 }
 
 .montagne {
   object-fit: cover;
-  margin-top: 30px;
-  width: 1240px;
-  height: 200px;
+  margin-top: 50px;
+  width: 86%;
+  height: 223px;
   border-radius: 20px;
+  filter: brightness(0.7);
 }
 
 .gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
+  justify-items: center;
   padding-top: 55px;
   padding-bottom: 55px;
   background-color: #f6f6f6;
   border-radius: 25px;
-  width: 1240px;
-  height: 829px;
+  width: 85%;
+  row-gap: 40px;
 }
 
 .card {
-  background-color: #ff6060;
+  position: relative;
   width: 340px;
   height: 340px;
   border-radius: 10px;
 }
 
-.apropos {
-  display: flex;
-  justify-content: center;
+.card h2 {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  margin: 0;
+  padding: 10px;
+  color: white;
 }
 
-.dropdown {
+.img_logements {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 340px;
+}
+
+.apropos {
   display: flex;
-  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.collapse_container {
   height: 54px;
+  width: 70%;
   background-color: #ff6060;
   border-radius: 5px;
 }
 
-.dropdown p {
+.collapse_title {
   display: flex;
   align-items: center;
-  padding-left: 15px;
-  color: white;
+  justify-content: space-between;
+  height: 54px;
+  margin-right: 15px;
+  margin-left: 15px;
   font-size: 24px;
   font-weight: 700;
+  background-color: #ff6060;
+  color: white;
+}
+
+.collapse_content {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 65px;
+  padding-bottom: 15px;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+}
+
+.collapse_content.open {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.collapse_content.closed {
+  max-height: 0;
+  opacity: 0;
 }
 
 footer {
@@ -150,5 +209,59 @@ footer p {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/****** Mobile *****/
+
+@media (max-width: 1024px) {
+  nav {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    align-items: center;
+  }
+
+  nav a {
+    margin-right: 15px;
+  }
+
+  .banner {
+    padding-top: 30px;
+    margin-right: -8px;
+  }
+
+  .banner img {
+    width: 145px;
+  }
+
+  .image-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .image-section img {
+    height: 120px;
+  }
+
+  .image-section h1 {
+    font-size: 24px;
+    left: 42%;
+    width: 70%;
+  }
+
+  .gallery {
+    background-color: white;
+    grid-template-columns: 1fr;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .img_logements {
+    height: 255px;
+  }
+
+  .montagne {
+    height: 120px;
   }
 }

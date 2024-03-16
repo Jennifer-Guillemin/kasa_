@@ -1,0 +1,31 @@
+.text_404 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_404 h1 {
+  font-size: 288px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  color: #ff6060;
+  margin-top: 4%;
+  margin-bottom: unset;
+}
+
+.text_404 p {
+  font-size: 36px;
+  color: #ff6060;
+  margin-bottom: 7%;
+}
+
+.text_404 a {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 6%;
+}
+
+/****** Mobile *****/
+
+@media (max-width: 1024px) {
+}

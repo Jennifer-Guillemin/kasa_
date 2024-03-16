@@ -1,21 +1,21 @@
-import Banner from "../components/Banner";
-import Footer from "../components/Footer";
+import Collapse from "../components/Collapse";
+import { aboutList } from "../components/Collapse";
 
 function Apropos() {
   return (
     <div>
-      <Banner />
-      <img
-        className="montagne"
-        src="./src/assets/montagne.png"
-        alt="La montagne"
-      />
-      <section className="apropos">
-        <div className="dropdown">
-          <p>Fiabilité</p>
-        </div>
-      </section>
-      <Footer />
+      <div className="container">
+        <img
+          className="montagne"
+          src="./src/assets/montagne.png"
+          alt="La montagne"
+        />
+        <section className="apropos">
+          {aboutList.map((item, index) => (
+            <Collapse key={index} title={item.title} content={item.content} />
+          ))}
+        </section>
+      </div>
     </div>
   );
 }

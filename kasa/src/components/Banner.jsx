@@ -11,9 +11,7 @@ function Banner() {
 
   return (
     <div className="banner">
-      <div>
-        <img src="./src/assets/LOGO.png" alt="" />
-      </div>
+      <img src="./src/assets/LOGO.png" alt="" />
       <nav>
         <Link
           className={`no-style ${selected === "/" ? "selected" : ""}`}
