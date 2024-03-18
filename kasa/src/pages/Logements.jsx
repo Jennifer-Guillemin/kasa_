@@ -1,6 +1,7 @@
+import Collapse from "../components/Collapse";
 import { useParams, useNavigate } from "react-router-dom";
 import LogementsData from "../data/logements.json";
-import Collapse from "../components/Collapse";
+import Rating from "../components/Rating";
 
 const LogementDetail = () => {
   const { id } = useParams();
@@ -30,14 +31,16 @@ const LogementDetail = () => {
             ))}
           </div>
         </div>
-        <div className="host_rating">
-          <h2>{logement.host.name}</h2>
-          <img
-            className="host_img"
-            src={logement.host.picture}
-            alt={logement.host.name}
-          />
-          <p>{logement.rating}</p>
+        <div className="div_host">
+          <div className="host_rating">
+            <h2>{logement.host.name}</h2>
+            <img
+              className="host_img"
+              src={logement.host.picture}
+              alt={logement.host.name}
+            />
+          </div>
+          <Rating rating={logement.rating} />
         </div>
       </section>
 

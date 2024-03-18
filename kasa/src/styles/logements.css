@@ -19,13 +19,14 @@
   justify-content: space-between;
   padding-top: 0px;
   padding-left: 7.5%;
-  padding-right: 7.5%;
+  padding-right: 3%;
 }
 
 .section_details h1 {
   color: #ff6060;
   font-size: 36px;
   margin-bottom: -25px;
+  margin-top: -10px;
 }
 
 .section_details p {
@@ -37,15 +38,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
   margin-top: -5px;
   background-color: #ff6060;
-  width: 115px;
+  padding: 0 2%;
   height: 25px;
   border-radius: 10px;
 }
 
 .div_tags {
   display: flex;
+  height: 25px;
   font-size: 14px;
   color: white;
   gap: 15px;
@@ -58,6 +61,8 @@
   align-items: center;
   color: #ff6060;
   width: 20%;
+  padding-left: 20px;
+  margin-bottom: -7px;
   gap: 15px;
 }
 
@@ -67,17 +72,64 @@
   border-radius: 50%;
 }
 
-.dropdown_details {
-  display: flex;
-  justify-content: center;
-  column-gap: 6%;
+.Rating {
+  margin-left: -25%;
+  padding-bottom: 20px;
+}
+
+.Rating .Star {
+  font-size: 24px;
+  padding: 3%;
+  color: #e3e3e3;
+}
+
+.Rating .Color {
+  color: #ff6060;
 }
 
 .collapse_details {
   background-color: #ff6060;
   border-radius: 10px;
   width: 40%;
-  height: 52px;
+}
+
+.dropdown_details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5.5%;
+}
+
+.dropdown_details .Collapse_container .collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  color: white;
+  cursor: pointer;
+  padding: 0 18px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.dropdown_details .Collapse_container .active,
+.collapse:hover {
+  background-color: #ff6060;
+}
+
+.dropdown_details .Collapse_container .content {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  background-color: #f1f1f1;
 }
 
 /****** Mobile *****/
@@ -95,6 +147,9 @@
 
   .section_details {
     flex-direction: column;
+    align-items: normal;
+    gap: 15px;
+    padding-top: 20px;
   }
 
   .section_details h1 {
@@ -106,20 +161,40 @@
     font-size: 14px;
   }
 
-  .host_rating {
+  .div_host {
     display: flex;
-    justify-content: space-between;
     flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 82%;
+    padding-bottom: 20px;
   }
 
-  .HostIMG {
-    height: 64px;
-    width: 64px;
-    border-radius: 50%;
+  .host_rating {
+    margin-right: -15%;
   }
 
   .host_rating h2 {
     font-size: 12px;
+  }
+
+  .div_host .Rating {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .Rating {
+    display: flex;
+    width: 98px;
+  }
+
+  .Rating .Star {
+    font-size: 13px;
+    padding: 3%;
+    color: #e3e3e3;
+  }
+
+  .Rating .Color {
+    color: #ff6060;
   }
 
   .dropdown_details {

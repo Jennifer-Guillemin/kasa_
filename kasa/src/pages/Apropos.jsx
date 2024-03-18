@@ -4,7 +4,7 @@ import { aboutList } from "../data/aboutList";
 function Apropos() {
   return (
     <div>
-      <div className="container">
+      <div className="dropdown_apropos">
         <img
           className="montagne"
           src="./src/assets/montagne.png"

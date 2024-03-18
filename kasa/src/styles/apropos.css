@@ -16,6 +16,47 @@
   width: 70%;
 }
 
+.dropdown_apropos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.dropdown_apropos .Collapse_container {
+  margin: 1% 0;
+}
+
+.dropdown_apropos .Collapse_container .collapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6060;
+  color: white;
+  cursor: pointer;
+  padding: 0 18px;
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  outline: none;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.dropdown_apropos .Collapse_container .active,
+.collapse:hover {
+  background-color: #ff6060;
+}
+
+.dropdown_apropos .Collapse_container .content {
+  width: auto;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  background-color: #f1f1f1;
+}
+
 /****** Mobile *****/
 
 @media (max-width: 767px) {
