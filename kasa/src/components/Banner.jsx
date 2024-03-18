@@ -12,7 +12,7 @@ function Banner() {
 
   return (
     <div className="banner">
-      <img src={HomeIMG} alt="" />
+      <img src={HomeIMG} alt="logo kasa" />
       <nav>
         <Link
           className={`no-style ${selected === "/" ? "selected" : ""}`}

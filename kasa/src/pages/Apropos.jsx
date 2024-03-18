@@ -1,5 +1,5 @@
 import Collapse from "../components/Collapse";
-import { aboutList } from "../components/Collapse";
+import { aboutList } from "../data/aboutList";
 
 function Apropos() {
   return (

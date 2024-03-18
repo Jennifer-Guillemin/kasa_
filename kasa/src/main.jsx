@@ -7,6 +7,7 @@ import Error404 from "./pages/Error404";
 import "./styles/index.css";
 import "./styles/logements.css";
 import "./styles/error404.css";
+import "./styles/apropos.css";
 import { createRoot } from "react-dom/client";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";

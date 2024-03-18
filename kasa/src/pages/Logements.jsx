@@ -30,11 +30,17 @@ const LogementDetail = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div className="host_rating">
           <h2>{logement.host.name}</h2>
+          <img
+            className="host_img"
+            src={logement.host.picture}
+            alt={logement.host.name}
+          />
           <p>{logement.rating}</p>
         </div>
       </section>
+
       <div className="dropdown_details">
         <div className="collapse_details">
           <Collapse title={"Description"} content={logement.description} />
