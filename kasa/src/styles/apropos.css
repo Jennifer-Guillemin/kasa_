@@ -16,6 +16,10 @@
   width: 70%;
 }
 
+.apropos .Collapse_container {
+  width: 100%;
+}
+
 .dropdown_apropos {
   display: flex;
   align-items: center;

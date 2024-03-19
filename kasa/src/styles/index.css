@@ -125,6 +125,33 @@ section {
   height: 340px;
 }
 
+/******** Animation du chevron ********/
+.arrow.open {
+  animation: rotateDown 0.3s ease forwards;
+}
+
+@keyframes rotateDown {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.arrow.closed {
+  animation: rotateUp 0.3s ease forwards;
+}
+
+@keyframes rotateUp {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 .collapse_container {
   height: 54px;
   width: 100%;
@@ -173,6 +200,7 @@ section {
   opacity: 0;
 }
 
+/*********  Footer  ********/
 footer {
   display: flex;
   flex-direction: column;
@@ -205,8 +233,7 @@ footer p {
   }
 }
 
-/****** Mobile *****/
-
+/******** Mobile *******/
 @media (max-width: 767px) {
   nav {
     display: block;
@@ -221,7 +248,7 @@ footer p {
 
   .banner {
     padding-top: 30px;
-    margin-right: -8px;
+    margin-right: -4%;
   }
 
   .banner img {
@@ -267,6 +294,7 @@ footer p {
     height: 255px;
   }
 
+  /******* Footer *******/
   footer {
     margin-top: 30px;
     justify-content: center;
@@ -284,7 +312,7 @@ footer p {
 }
 
 /***Tablette******/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1278px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }

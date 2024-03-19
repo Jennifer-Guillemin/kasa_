@@ -1,7 +1,8 @@
-import Collapse from "../components/Collapse";
 import { useParams, useNavigate } from "react-router-dom";
 import LogementsData from "../data/logements.json";
+import Collapse from "../components/Collapse";
 import Rating from "../components/Rating";
+import Carousel from "../components/Slideshow";
 
 const LogementDetail = () => {
   const { id } = useParams();
@@ -15,12 +16,10 @@ const LogementDetail = () => {
   }
 
   return (
-    <div>
-      <section className="img_section">
-        <img className="img_detail" src={logement.cover} alt={logement.title} />
-      </section>
-      <section className="section_details">
-        <div>
+    <div className="logements">
+      <Carousel images={logement.pictures} alt={logement.description} />{" "}
+      <div className="logements_details">
+        <div className="logements_info">
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
           <div className="div_tags">
@@ -31,9 +30,9 @@ const LogementDetail = () => {
             ))}
           </div>
         </div>
-        <div className="div_host">
-          <div className="host_rating">
-            <h2>{logement.host.name}</h2>
+        <div className="logement_host">
+          <div className="host_detail">
+            <p className="host_text">{logement.host.name}</p>
             <img
               className="host_img"
               src={logement.host.picture}
@@ -42,15 +41,10 @@ const LogementDetail = () => {
           </div>
           <Rating rating={logement.rating} />
         </div>
-      </section>
-
+      </div>
       <div className="dropdown_details">
-        <div className="collapse_details">
-          <Collapse title={"Description"} content={logement.description} />
-        </div>
-        <div className="collapse_details">
-          <Collapse title={"Équipements"} content={logement.equipments} />
-        </div>
+        <Collapse title={"Description"} content={logement.description} />
+        <Collapse title={"Équipements"} content={logement.equipments} />
       </div>
     </div>
   );

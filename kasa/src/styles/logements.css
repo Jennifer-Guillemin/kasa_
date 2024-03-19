@@ -1,210 +1,236 @@
-.img_section {
+.logements {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 50px;
 }
 
-.img_detail {
-  object-fit: cover;
-  width: 86%;
+.logements .Carousel {
+  width: 85%;
+}
+
+.logements .Carousel .logement_img {
+  width: 100%;
   height: 415px;
   border-radius: 25px;
+  object-fit: cover;
+  margin-top: 50px;
 }
 
-.section_details {
+.logements .Carousel {
+  position: relative;
+}
+
+.logements .carousel_button {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 80px;
+  color: white;
+  cursor: pointer;
+}
+
+.logements .carousel_button:first-child {
+  left: 1%;
+}
+
+.logements .carousel_button:last-child {
+  right: 1%;
+}
+
+.logements .logements_details {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-top: 0px;
-  padding-left: 7.5%;
-  padding-right: 3%;
+  width: 85%;
 }
 
-.section_details h1 {
+.logements_info h1 {
   color: #ff6060;
   font-size: 36px;
-  margin-bottom: -25px;
-  margin-top: -10px;
+  margin-top: 15px;
+  margin-bottom: -20px;
 }
 
-.section_details p {
+.logements_info p {
   font-size: 18px;
   font-weight: 500;
 }
 
-.section_details .tags {
+.div_tags {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+  gap: 10px;
+}
+
+.div_tags .tags {
+  background-color: #ff6060;
+  font-size: 14px;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  margin-top: -5px;
-  background-color: #ff6060;
-  padding: 0 2%;
-  height: 25px;
+  padding: 0 4%;
   border-radius: 10px;
 }
 
-.div_tags {
+.host_detail {
   display: flex;
-  height: 25px;
-  font-size: 14px;
-  color: white;
-  gap: 15px;
+  margin-top: 20px;
+  gap: 5%;
 }
 
-.host_rating {
-  display: flex;
-  flex-direction: row;
-  text-align: right;
-  align-items: center;
+.host_text {
+  width: 70px;
+  font-size: 18px;
   color: #ff6060;
-  width: 20%;
-  padding-left: 20px;
-  margin-bottom: -7px;
-  gap: 15px;
+  text-align: end;
+  margin-top: 12px;
 }
 
 .host_img {
-  height: 64px;
   width: 64px;
+  height: 64px;
   border-radius: 50%;
 }
 
+.logements .dropdown_details {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.Collapse_container {
+  width: 45%;
+  margin: 1% 0;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6060;
+  color: white;
+  cursor: pointer;
+  padding: 0 18px;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+.logements .dropdown_details .Collapse_container .Active,
+.collapse:hover {
+  background-color: #a52a2a;
+}
+
+.logements .dropdown_details .Collapse_container .content {
+  font-size: 18px;
+  width: auto;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  background-color: #f6f6f673;
+}
+
 .Rating {
-  margin-left: -25%;
-  padding-bottom: 20px;
+  width: 150px;
+  color: #e3e3e3;
+  font-size: 24px;
 }
 
 .Rating .Star {
-  font-size: 24px;
-  padding: 3%;
-  color: #e3e3e3;
+  padding: 1%;
 }
 
 .Rating .Color {
   color: #ff6060;
 }
 
-.collapse_details {
-  background-color: #ff6060;
-  border-radius: 10px;
-  width: 40%;
-}
-
-.dropdown_details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5.5%;
-}
-
-.dropdown_details .Collapse_container .collapse {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ff6060;
-  color: white;
-  cursor: pointer;
-  padding: 0 18px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.dropdown_details .Collapse_container .active,
-.collapse:hover {
-  background-color: #ff6060;
-}
-
-.dropdown_details .Collapse_container .content {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-in-out;
-  background-color: #f1f1f1;
-}
-
 /****** Mobile *****/
 
-@media (max-width: 767px) {
-  .img_section {
+@media screen and (max-width: 767px) {
+  .logements .Carousel .logement_img {
     height: 255px;
-    padding-top: 30px;
-  }
-
-  .img_detail {
-    width: 90%;
     border-radius: 10px;
+    margin-top: 25px;
   }
 
-  .section_details {
+  .logements .carousel_button {
+    font-size: 20px;
+  }
+
+  .logements .logements_details {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    align-items: normal;
-    gap: 15px;
-    padding-top: 20px;
   }
 
-  .section_details h1 {
+  .logements_info h1 {
     font-size: 18px;
-    padding-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: -5px;
   }
 
-  .section_details p {
+  .logements_info p {
     font-size: 14px;
   }
 
-  .div_host {
+  .div_tags .tags {
+    font-size: 10px;
+    padding: 1% 4%;
+    border-radius: 5px;
+  }
+
+  .logement_host {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
-    width: 82%;
-    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
   }
 
-  .host_rating {
-    margin-right: -15%;
-  }
-
-  .host_rating h2 {
-    font-size: 12px;
-  }
-
-  .div_host .Rating {
-    display: flex;
-    justify-content: flex-start;
+  .host_detail {
+    margin: unset;
   }
 
   .Rating {
-    display: flex;
-    width: 98px;
+    margin-top: 0;
+    font-size: 15px;
   }
 
-  .Rating .Star {
-    font-size: 13px;
-    padding: 3%;
-    color: #e3e3e3;
+  .host_text {
+    font-size: 12px;
+    text-align: center;
   }
 
-  .Rating .Color {
-    color: #ff6060;
+  .host_img {
+    width: 32px;
+    height: 32px;
+    margin: 9% 0;
   }
 
-  .dropdown_details {
-    display: flex;
+  .logements .dropdown_details {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
 
-  .collapse_details {
-    width: 90%;
+  .Collapse_container {
+    width: 100%;
+  }
+
+  .collapse {
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .Collapse_container .content {
+    font-size: 12px;
   }
 }

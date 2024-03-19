@@ -1,8 +1,37 @@
-//Carrousel d'images
+import React, { useState } from "react";
 
-let i = 0;
-const arrow_left = document.querySelector(".arrow_left");
-const arrow_right = document.querySelector("arrow-right");
-const imgdetail = document.querySelector(".img_detail");
-const p = document.querySelector("#banner p");
-const dots = document.querySelectorAll(".dot");
+const Carousel = ({ images, alt }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const goToPreviousSlide = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextSlide = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const showNavigation = images.length > 1;
+
+  return (
+    <div className="Carousel">
+      {showNavigation && (
+        <button className="carousel_button" onClick={goToPreviousSlide}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+      )}
+      <img className="logement_img" src={images[currentImageIndex]} alt={alt} />
+      {showNavigation && (
+        <button className="carousel_button" onClick={goToNextSlide}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default Carousel;
