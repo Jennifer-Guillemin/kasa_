@@ -41,6 +41,7 @@ nav {
   gap: 57px;
   font-style: normal;
   font-size: 24px;
+  font-weight: 500;
   padding-right: 8%;
 }
 
@@ -292,11 +293,12 @@ footer p {
 
   .card {
     height: 255px;
+    width: 335px;
   }
 
   /******* Footer *******/
   footer {
-    margin-top: 30px;
+    margin-top: 20px;
     justify-content: center;
   }
 

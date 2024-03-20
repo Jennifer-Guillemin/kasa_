@@ -65,14 +65,20 @@
 
 @media (max-width: 767px) {
   .montagne {
-    margin-top: 30px;
+    margin-top: 20px;
     height: 120px;
     border-radius: 10px;
   }
 
   .apropos {
-    padding-top: 30px;
-    gap: 30px;
+    padding-top: 15px;
+    gap: 15px;
     width: 85%;
+  }
+
+  .dropdown_apropos .Collapse_container .collapse {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 13px;
   }
 }
