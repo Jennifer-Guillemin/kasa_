@@ -128,7 +128,7 @@ section {
 
 /******** Animation du chevron ********/
 .arrow.open {
-  animation: rotateDown 0.3s ease forwards;
+  animation: rotateDown 0.5s ease forwards;
 }
 
 @keyframes rotateDown {
@@ -141,7 +141,7 @@ section {
 }
 
 .arrow.closed {
-  animation: rotateUp 0.3s ease forwards;
+  animation: rotateUp 0.5s ease forwards;
 }
 
 @keyframes rotateUp {
