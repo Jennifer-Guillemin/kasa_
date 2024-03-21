@@ -22,8 +22,19 @@ function Collapse({ title, content }) {
           )}
         </span>
       </button>
-      <div className="content" style={{ maxHeight: isActive ? "1000px" : "0" }}>
-        <p>{content}</p>
+      <div
+        className="content"
+        style={{
+          maxHeight: isActive ? "1000px" : "0",
+          overflow: "hidden",
+        }}
+      >
+        {content &&
+          (Array.isArray(content) ? (
+            content.map((item, index) => <p key={index}>{item}</p>)
+          ) : (
+            <p>{content}</p>
+          ))}
       </div>
     </div>
   );
