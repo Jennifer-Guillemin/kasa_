@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-between;
   width: 85%;
+  font-family: "Montserrat";
 }
 
 .logements_info h1 {
@@ -66,19 +67,19 @@
 
 .div_tags .tags {
   background-color: #ff6060;
-  font-size: 14px;
+  font-size: 13px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 4% 0.5%;
+  padding: 0 4% 0.8%;
   border-radius: 10px;
 }
 
 .host_detail {
   display: flex;
   margin-top: 20px;
-  gap: 5%;
+  gap: 10%;
 }
 
 .host_text {
@@ -123,6 +124,7 @@
   outline: none;
   font-size: 18px;
   font-weight: 700;
+  font-family: "Montserrat";
 }
 
 .logements .dropdown_details .Collapse_container .Active,

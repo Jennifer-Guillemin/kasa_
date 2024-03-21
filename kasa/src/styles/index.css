@@ -39,7 +39,7 @@ body {
 nav {
   display: flex;
   gap: 57px;
-  font-style: normal;
+  font-family: "Montserrat";
   font-size: 24px;
   font-weight: 500;
   padding-right: 8%;
@@ -107,6 +107,7 @@ section {
 .gallery .card h2 {
   position: absolute;
   font-size: 18px;
+  font-family: "Montserrat";
   color: white;
   margin-left: 5%;
   bottom: 70px;
@@ -217,6 +218,7 @@ footer {
 
 footer p {
   font-size: 24px;
+  font-family: "Montserrat";
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -227,7 +229,7 @@ footer p {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: black;
   }
   button {
     background-color: #f9f9f9;

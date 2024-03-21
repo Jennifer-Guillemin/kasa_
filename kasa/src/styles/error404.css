@@ -17,13 +17,17 @@
 .text_404 p {
   font-size: 36px;
   color: #ff6060;
-  margin-bottom: 7%;
+  margin-bottom: 10%;
+  font-family: "Montserrat";
+  font-weight: 500;
 }
 
 .text_404 a {
   color: black;
   font-size: 18px;
   margin-bottom: 6%;
+  font-weight: 500;
+  font-family: "Montserrat";
 }
 
 /****** Mobile *****/
