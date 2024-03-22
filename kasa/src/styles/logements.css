@@ -5,7 +5,9 @@
 }
 
 .logements .Carousel {
+  position: relative;
   width: 85%;
+  margin: 0 auto;
 }
 
 .logements .Carousel .logement_img {
@@ -16,11 +18,7 @@
   margin-top: 50px;
 }
 
-.logements .Carousel {
-  position: relative;
-}
-
-.logements .carousel_button {
+.logements .carousel_button_left {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
@@ -31,12 +29,28 @@
   cursor: pointer;
 }
 
-.logements .carousel_button:first-child {
-  left: 1%;
+.logements .carousel_button_right {
+  position: absolute;
+  top: 55%;
+  right: 1%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 80px;
+  color: white;
+  cursor: pointer;
 }
 
-.logements .carousel_button:last-child {
-  right: 1%;
+.carousel_indicator {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .logements .logements_details {
@@ -165,8 +179,16 @@
     margin-top: 25px;
   }
 
-  .logements .carousel_button {
+  .logements .carousel_button_left {
     font-size: 20px;
+  }
+
+  .logements .carousel_button_right {
+    font-size: 20px;
+  }
+
+  .carousel_indicator {
+    display: none;
   }
 
   .logements .logements_details {

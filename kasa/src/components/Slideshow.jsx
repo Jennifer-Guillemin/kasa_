@@ -20,15 +20,20 @@ const Carousel = ({ images, alt }) => {
   return (
     <div className="Carousel">
       {showNavigation && (
-        <button className="carousel_button" onClick={goToPreviousSlide}>
+        <button className="carousel_button_left" onClick={goToPreviousSlide}>
           <i className="fa-solid fa-chevron-left"></i>
         </button>
       )}
       <img className="logement_img" src={images[currentImageIndex]} alt={alt} />
       {showNavigation && (
-        <button className="carousel_button" onClick={goToNextSlide}>
+        <button className="carousel_button_right" onClick={goToNextSlide}>
           <i className="fa-solid fa-chevron-right"></i>
         </button>
+      )}
+      {showNavigation && (
+        <div className="carousel_indicator">
+          {currentImageIndex + 1}/{images.length}
+        </div>
       )}
     </div>
   );
