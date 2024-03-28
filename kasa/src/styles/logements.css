@@ -21,6 +21,7 @@
 .logements .carousel_button_left {
   position: absolute;
   top: 55%;
+  left: 1%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
