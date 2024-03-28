@@ -10,9 +10,8 @@ import "./styles/index.css";
 import "./styles/logements.css";
 import "./styles/error404.css";
 import "./styles/apropos.css";
-import { createRoot } from "react-dom/client";
-
 import "./assets/LOGO.png";
+import { createRoot } from "react-dom/client";
 
 const domNode = document.getElementById("root");
 const root = createRoot(domNode);
